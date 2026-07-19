@@ -1,11 +1,16 @@
+# new-portfolio
 
-  # Build and Implement Designs
+Vele Ndamulelo's portfolio site.
 
-  This is a code bundle for Build and Implement Designs. The original project is available at https://www.figma.com/design/aX89OEp00iRZQ0gh7fMkH7/Build-and-Implement-Designs.
+## Running locally
 
-  ## Running the code
+```bash
+npm install
+npm run dev
+```
 
-  Run `npm i` to install the dependencies.
+Build for production:
 
-  Run `npm run dev` to start the development server.
-  
+```bash
+npm run build
+```
