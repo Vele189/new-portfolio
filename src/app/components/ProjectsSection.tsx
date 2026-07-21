@@ -2,6 +2,8 @@ import { ImageWithFallback } from "./figma/ImageWithFallback";
 import { ContactCTA } from "./ContactCTA";
 import { ArrowUpLeftContained } from "./icons";
 import { LinkPreview } from "./ui/link-preview";
+import { TextGenerateEffect } from "./ui/text-generate-effect";
+import { Reveal } from "./ui/reveal";
 import imgProject from "../../imports/Home/3393feeedcab0173f93e608738dbd98509eadb39.png";
 
 const projects = [
@@ -58,13 +60,17 @@ export function ProjectsSection() {
   return (
     <section className="bg-white" id="projects">
       <div className="px-6 md:px-12 lg:px-[133px] py-16 md:py-[100px] flex flex-col gap-12 md:gap-[66px]">
-        <h2 className="font-['Inter:Medium',sans-serif] font-medium text-[clamp(2rem,5vw,5rem)] leading-[1.05] text-black max-w-[1078px]">
-          welcome to my realm of wild projects and awesome creations
-        </h2>
+        <TextGenerateEffect
+          as="h2"
+          words="welcome to my realm of wild projects and awesome creations"
+          className="font-['Inter:Medium',sans-serif] font-medium text-[clamp(2rem,5vw,5rem)] leading-[1.05] text-black max-w-[1078px]"
+        />
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
-          {projects.map((p) => (
-            <ProjectCard key={p.id} title={p.title} image={p.image} href={p.href} />
+          {projects.map((p, i) => (
+            <Reveal key={p.id} delay={i * 0.12} y={40}>
+              <ProjectCard title={p.title} image={p.image} href={p.href} />
+            </Reveal>
           ))}
         </div>
       </div>
