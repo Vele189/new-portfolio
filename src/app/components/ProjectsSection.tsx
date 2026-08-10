@@ -8,16 +8,16 @@ import imgProject from "../../imports/Home/3393feeedcab0173f93e608738dbd98509ead
 
 const projects = [
   {
-    id: "continuum-landing",
-    title: "Continuum Landing Page",
-    image: imgProject,
-    href: "https://joincontinuum.co.za",
-  },
-  {
     id: "continuum-app",
     title: "Continuum App",
     image: imgProject,
     href: "https://www.continuumapp.co.za",
+  },
+  {
+    id: "chunky-fm",
+    title: "Chunky FM",
+    image: "/chunky-fm-cover.png",
+    href: "https://chunkyfm-production.up.railway.app/",
   },
 ];
 
