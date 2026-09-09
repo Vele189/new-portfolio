@@ -5,7 +5,11 @@ import { Highlight } from "./ui/hero-highlight";
 import { PixelatedCanvas } from "./ui/pixelated-canvas";
 import { PointerHighlight } from "./ui/pointer-highlight";
 import { TypewriterEffect } from "./ui/typewriter-effect";
-import imgHero from "../../imports/Home/80c4a33f369c873cfb25e59846e0cacee22530fd.png";
+
+const HERO_IMAGE = "/hero-portrait.webp";
+
+const passionateTagline =
+  "Passionate Creative Designer and Developer, dedicated to crafting innovative solutions and exceptional digital experiences through modern technologies";
 
 const passionateWords = [
   "Passionate",
@@ -55,7 +59,7 @@ export function HeroSection() {
     >
       {size.width > 0 && size.height > 0 && (
         <PixelatedCanvas
-          src={imgHero}
+          src={HERO_IMAGE}
           width={size.width}
           height={size.height}
           cellSize={4}
@@ -85,11 +89,16 @@ export function HeroSection() {
             Vele Ndamulelo
           </p>
         </PointerHighlight>
-        <TypewriterEffect
-          words={passionateWords}
-          className="max-w-[600px] font-['Inter:Light',sans-serif] !font-light !text-[16px] sm:!text-[16px] md:!text-[20px] lg:!text-[20px] !text-right leading-normal"
-          cursorClassName="bg-white w-[2px] h-[1em] md:h-[1em] lg:h-[1em] align-middle"
-        />
+        <p className="sr-only">
+          {passionateTagline}
+        </p>
+        <div aria-hidden="true">
+          <TypewriterEffect
+            words={passionateWords}
+            className="max-w-[600px] font-['Inter:Light',sans-serif] !font-light !text-[16px] sm:!text-[16px] md:!text-[20px] lg:!text-[20px] !text-right leading-normal"
+            cursorClassName="bg-white w-[2px] h-[1em] md:h-[1em] lg:h-[1em] align-middle"
+          />
+        </div>
       </div>
 
       {/* Hero title */}

@@ -9,6 +9,7 @@ export const TextGenerateEffect = ({
   words,
   className,
   style,
+  id,
   filter = true,
   duration = 0.6,
   stagger: staggerAmount = 0.12,
@@ -17,6 +18,7 @@ export const TextGenerateEffect = ({
   words: string;
   className?: string;
   style?: React.CSSProperties;
+  id?: string;
   filter?: boolean;
   duration?: number;
   stagger?: number;
@@ -49,7 +51,7 @@ export const TextGenerateEffect = ({
   const MotionTag = motion[Component as "p"];
 
   return (
-    <MotionTag ref={scope} className={className} style={style}>
+    <MotionTag ref={scope} id={id} className={className} style={style}>
       {wordsArray.map((word, idx) => (
         <motion.span
           key={word + idx}

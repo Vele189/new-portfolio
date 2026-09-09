@@ -1,9 +1,9 @@
 import svgPaths from "../../imports/Home/svg-eoj8yryyml";
 import { imgGroup } from "../../imports/Home/svg-96sp3";
-import imgImage5 from "../../imports/Home/370fdcf2b4c0c275d4e57fe08ce5aae3fa853a2c.png";
-import imgImage7 from "../../imports/Home/4c6639c02171bd6897575ed41792d4e38400c1e3.png";
-import imgImage8 from "../../imports/Home/316a38861af4782d782f23cc3f41db3b065d2945.png";
-import imgImage6 from "../../imports/Home/2673e561688c2e8c06e592989147b990ec3b0a5f.png";
+import imgImage5 from "../../imports/Home/370fdcf2b4c0c275d4e57fe08ce5aae3fa853a2c.webp";
+import imgImage7 from "../../imports/Home/4c6639c02171bd6897575ed41792d4e38400c1e3.webp";
+import imgImage8 from "../../imports/Home/316a38861af4782d782f23cc3f41db3b065d2945.webp";
+import imgImage6 from "../../imports/Home/2673e561688c2e8c06e592989147b990ec3b0a5f.webp";
 
 // ---------- Badge wrapper ----------
 function Badge({ children }: { children: React.ReactNode }) {
@@ -311,7 +311,7 @@ export function Image5Badge() {
   return (
     <Badge>
       <div className="absolute h-[57.978px] left-[16px] top-[21px] w-[50px]">
-        <img alt="GSAP" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgImage5} />
+        <img alt="GSAP" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgImage5} loading="lazy" decoding="async" />
       </div>
     </Badge>
   );
@@ -392,7 +392,7 @@ export function Image7Badge() {
   return (
     <Badge>
       <div className="absolute left-[25px] size-[50px] top-[25px]">
-        <img alt="Netlify" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgImage7} />
+        <img alt="Netlify" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgImage7} loading="lazy" decoding="async" />
       </div>
     </Badge>
   );
@@ -402,7 +402,7 @@ export function Image8Badge() {
   return (
     <Badge>
       <div className="absolute h-[40.234px] left-[25px] top-[30px] w-[50px]">
-        <img alt="AWS" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgImage8} />
+        <img alt="AWS" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgImage8} loading="lazy" decoding="async" />
       </div>
     </Badge>
   );
@@ -659,7 +659,7 @@ export function Image6Badge() {
   return (
     <Badge>
       <div className="absolute h-[65.709px] left-0 top-[17px] w-[100px]">
-        <img alt="Flutter" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgImage6} />
+        <img alt="Flutter" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgImage6} loading="lazy" decoding="async" />
       </div>
     </Badge>
   );

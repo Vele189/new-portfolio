@@ -25,6 +25,14 @@ type DockItem = {
   download?: string | boolean;
 };
 
+// Send links that leave the site to a new tab. In-page anchors, mailto, tel and
+// the resume download stay put, where a new tab would either break the jump or
+// leave a blank window behind.
+const linkTargetProps = (href: string) =>
+  /^https?:\/\//i.test(href)
+    ? { target: "_blank" as const, rel: "noopener noreferrer" }
+    : {};
+
 export const FloatingDock = ({
   items,
   desktopClassName,
@@ -79,6 +87,8 @@ const FloatingDockMobile = ({
                   href={item.href}
                   download={item.download}
                   key={item.title}
+                  aria-label={item.title}
+                  {...linkTargetProps(item.href)}
                   className="flex h-10 w-10 items-center justify-center rounded-full bg-gray-50 dark:bg-neutral-900"
                 >
                   <div className="h-4 w-4">{item.icon}</div>
@@ -178,7 +188,12 @@ function IconContainer({
   const [hovered, setHovered] = useState(false);
 
   return (
-    <a href={href} download={download}>
+    <a
+      href={href}
+      download={download}
+      aria-label={title}
+      {...linkTargetProps(href)}
+    >
       <motion.div
         ref={ref}
         style={{ width, height }}

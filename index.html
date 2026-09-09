@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- Primary -->
-    <title>Vele Ndamulelo — Creative Developer &amp; Designer</title>
+    <title>Vele Ndamulelo | Creative Developer and Designer</title>
     <meta
       name="description"
-      content="Vele Ndamulelo is a South African creative developer and designer building simple, functional, and visually striking digital experiences with modern web technologies — React, TypeScript, Next.js, and thoughtful UI/UX design."
+      content="Vele Ndamulelo is a South African creative developer and designer who builds simple, functional and visually striking web experiences with React, TypeScript and Next.js."
     />
     <meta name="author" content="Vele Ndamulelo" />
     <meta
@@ -18,6 +18,17 @@
     <link rel="canonical" href="https://velendamulelo.vercel.app/" />
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
     <meta name="theme-color" content="#000000" />
+
+    <!-- Fonts: connect early, then fetch in parallel with the app stylesheet -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&family=IBM+Plex+Mono:wght@400&display=swap"
+    />
+
+    <!-- Largest contentful paint image; the canvas hero cannot be discovered by the parser -->
+    <link rel="preload" as="image" href="/hero-portrait.webp" fetchpriority="high" />
 
     <!-- Icons -->
     <link rel="icon" href="/favicon.ico" sizes="any" />
@@ -29,29 +40,30 @@
     <!-- Open Graph -->
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="Vele Ndamulelo" />
-    <meta property="og:title" content="Vele Ndamulelo — Creative Developer &amp; Designer" />
+    <meta property="og:title" content="Vele Ndamulelo | Creative Developer and Designer" />
     <meta
       property="og:description"
-      content="Creative developer and designer building simple, functional, and visually striking digital experiences with modern web technologies."
+      content="Creative developer and designer building simple, functional and visually striking digital experiences with modern web technologies."
     />
     <meta property="og:url" content="https://velendamulelo.vercel.app/" />
     <meta property="og:image" content="https://velendamulelo.vercel.app/og-image.png" />
+    <meta property="og:image:type" content="image/png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
-    <meta property="og:image:alt" content="Vele Ndamulelo — Creative Developer & Designer" />
+    <meta property="og:image:alt" content="Vele Ndamulelo, creative developer and designer" />
     <meta property="og:locale" content="en_ZA" />
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Vele Ndamulelo — Creative Developer &amp; Designer" />
+    <meta name="twitter:title" content="Vele Ndamulelo | Creative Developer and Designer" />
     <meta
       name="twitter:description"
-      content="Creative developer and designer building simple, functional, and visually striking digital experiences."
+      content="Creative developer and designer building simple, functional and visually striking digital experiences."
     />
     <meta name="twitter:image" content="https://velendamulelo.vercel.app/og-image.png" />
-    <meta name="twitter:image:alt" content="Vele Ndamulelo — Creative Developer & Designer" />
+    <meta name="twitter:image:alt" content="Vele Ndamulelo, creative developer and designer" />
 
-    <!-- Structured data for search & answer engines -->
+    <!-- Structured data for search and answer engines -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -60,9 +72,12 @@
           "@type": "Person",
           "@id": "https://velendamulelo.vercel.app/#person",
           "name": "Vele Ndamulelo",
-          "jobTitle": "Creative Developer & Designer",
-          "description": "Creative developer and designer building simple, functional, and visually striking digital experiences with modern web technologies.",
+          "givenName": "Vele",
+          "familyName": "Ndamulelo",
+          "jobTitle": "Creative Developer and Designer",
+          "description": "Creative developer and designer building simple, functional and visually striking digital experiences with modern web technologies.",
           "url": "https://velendamulelo.vercel.app/",
+          "mainEntityOfPage": { "@id": "https://velendamulelo.vercel.app/#profilepage" },
           "image": "https://velendamulelo.vercel.app/og-image.png",
           "email": "mailto:velendamulelo057@gmail.com",
           "telephone": "+27722689505",
@@ -71,6 +86,12 @@
             "addressCountry": "ZA"
           },
           "nationality": "South African",
+          "hasOccupation": {
+            "@type": "Occupation",
+            "name": "Creative Developer and Designer",
+            "occupationalCategory": "15-1254.00 Web Developers",
+            "skills": "React, TypeScript, Next.js, Node.js, UI/UX design, web animation, cloud deployment"
+          },
           "sameAs": [
             "https://www.linkedin.com/in/vele-ndamulelo-3a3085372",
             "https://github.com/Vele189"
@@ -85,7 +106,7 @@
             "Node.js",
             "Web Animations",
             "Database Management",
-            "Cloud & Deployment",
+            "Cloud and Deployment",
             "Figma"
           ]
         },
@@ -93,7 +114,7 @@
           "@type": "WebSite",
           "@id": "https://velendamulelo.vercel.app/#website",
           "url": "https://velendamulelo.vercel.app/",
-          "name": "Vele Ndamulelo — Portfolio",
+          "name": "Vele Ndamulelo Portfolio",
           "description": "Portfolio of Vele Ndamulelo, a creative developer and designer.",
           "inLanguage": "en",
           "publisher": { "@id": "https://velendamulelo.vercel.app/#person" }
@@ -102,10 +123,115 @@
           "@type": "ProfilePage",
           "@id": "https://velendamulelo.vercel.app/#profilepage",
           "url": "https://velendamulelo.vercel.app/",
-          "name": "Vele Ndamulelo — Creative Developer & Designer",
+          "name": "Vele Ndamulelo, Creative Developer and Designer",
           "isPartOf": { "@id": "https://velendamulelo.vercel.app/#website" },
           "about": { "@id": "https://velendamulelo.vercel.app/#person" },
-          "mainEntity": { "@id": "https://velendamulelo.vercel.app/#person" }
+          "mainEntity": { "@id": "https://velendamulelo.vercel.app/#person" },
+          "significantLink": [
+            "https://www.continuumapp.co.za",
+            "https://chunkyfm-production.up.railway.app/",
+            "https://horizon-climate-risk.streamlit.app/"
+          ]
+        },
+        {
+          "@type": "ItemList",
+          "@id": "https://velendamulelo.vercel.app/#projects",
+          "name": "Projects by Vele Ndamulelo",
+          "itemListOrder": "https://schema.org/ItemListOrderAscending",
+          "numberOfItems": 3,
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "item": {
+                "@type": "WebApplication",
+                "name": "Continuum App",
+                "url": "https://www.continuumapp.co.za",
+                "description": "A project time tracking tool with one click time logging and a board view for sprints, tasks and activity.",
+                "applicationCategory": "BusinessApplication",
+                "author": { "@id": "https://velendamulelo.vercel.app/#person" }
+              }
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "item": {
+                "@type": "WebApplication",
+                "name": "Chunky FM",
+                "url": "https://chunkyfm-production.up.railway.app/",
+                "description": "A live internet radio station where every listener hears the same second of the same song, with a single curator picking the records.",
+                "applicationCategory": "MultimediaApplication",
+                "author": { "@id": "https://velendamulelo.vercel.app/#person" }
+              }
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "item": {
+                "@type": "WebApplication",
+                "name": "Horizon Climate Risk",
+                "url": "https://horizon-climate-risk.streamlit.app/",
+                "description": "A climate risk dashboard that models thirty years of observations for fifteen cities into a governed warehouse and scores risk a week ahead.",
+                "applicationCategory": "BusinessApplication",
+                "author": { "@id": "https://velendamulelo.vercel.app/#person" }
+              }
+            }
+          ]
+        },
+        {
+          "@type": "FAQPage",
+          "@id": "https://velendamulelo.vercel.app/#faq",
+          "isPartOf": { "@id": "https://velendamulelo.vercel.app/#website" },
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Who is Vele Ndamulelo?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Vele Ndamulelo is a South African creative developer and designer. He builds simple, functional and visually striking digital experiences, and works at the intersection of design, development and user experience."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "What does Vele Ndamulelo do?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "He designs and builds web applications end to end. That covers front-end development, back-end development and APIs, database design, UI/UX design, web animation, testing and cloud deployment."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "What technologies does Vele Ndamulelo use?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "On the front end he works with React, Next.js, TypeScript, JavaScript, Redux, Tailwind CSS, Sass and Framer Motion. On the back end he uses Node.js, Express, Django and Ruby on Rails with MySQL, PostgreSQL, MongoDB and Firebase. He also works in Python, C, C++ and Ruby, and deploys with Docker, Vercel and Azure. He designs in Figma."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "What projects has Vele Ndamulelo built?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Three projects are featured in his portfolio. Continuum App is a project time tracking tool with one click time logging and a board view for sprints and tasks. Chunky FM is a live internet radio station where every listener hears the same second of the same song. Horizon Climate Risk is a climate risk dashboard that models thirty years of observations for fifteen cities and scores risk a week ahead."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How can I contact Vele Ndamulelo?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "By email at velendamulelo057@gmail.com or by phone on +27 72 268 9505. He is also on LinkedIn and GitHub."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Where is Vele Ndamulelo based?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "He is based in South Africa."
+              }
+            }
+          ]
         }
       ]
     }
@@ -116,6 +242,56 @@
 
   <body>
     <div id="root"></div>
+
+    <!--
+      The app is a client-rendered SPA, so crawlers that do not execute
+      JavaScript see an empty root. This mirror gives them the same facts.
+    -->
+    <noscript>
+      <h1>Vele Ndamulelo, Creative Developer and Designer</h1>
+      <p>
+        Vele Ndamulelo is a South African creative developer and designer.
+        Driven by curiosity and a love for design, he creates simple,
+        functional and visually striking digital experiences.
+      </p>
+
+      <h2>Skills</h2>
+      <ul>
+        <li>Front-end development with React, Next.js, TypeScript, JavaScript and Redux</li>
+        <li>Back-end development with Node.js, Express, Django and Ruby on Rails</li>
+        <li>Database management with MySQL, PostgreSQL, MongoDB and Firebase</li>
+        <li>Styling and design with Tailwind CSS, Sass, Bootstrap and Material UI</li>
+        <li>UI/UX design, prototyping and wireframing in Figma</li>
+        <li>Web animation with Framer Motion and Lottie</li>
+        <li>Cloud and deployment with Docker, Vercel and Azure</li>
+        <li>Testing and debugging with Postman, Jest and Selenium</li>
+        <li>Programming in Python, C, C++ and Ruby</li>
+      </ul>
+
+      <h2>Projects</h2>
+      <ul>
+        <li><a href="https://www.continuumapp.co.za" target="_blank" rel="noopener noreferrer">Continuum App</a>, a project time tracking tool with one click time logging.</li>
+        <li>
+          <a href="https://chunkyfm-production.up.railway.app/" target="_blank" rel="noopener noreferrer">Chunky FM</a>, a
+          live internet radio station where every listener hears the same second
+          of the same song.
+        </li>
+        <li>
+          <a href="https://horizon-climate-risk.streamlit.app/" target="_blank" rel="noopener noreferrer">Horizon Climate Risk</a>,
+          a climate risk dashboard covering thirty years of observations for
+          fifteen cities, scored a week ahead.
+        </li>
+      </ul>
+
+      <h2>Contact</h2>
+      <ul>
+        <li>Email: <a href="mailto:velendamulelo057@gmail.com">velendamulelo057@gmail.com</a></li>
+        <li>Phone: <a href="tel:+27722689505">+27 72 268 9505</a></li>
+        <li><a href="https://www.linkedin.com/in/vele-ndamulelo-3a3085372" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+        <li><a href="https://github.com/Vele189" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+      </ul>
+    </noscript>
+
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>

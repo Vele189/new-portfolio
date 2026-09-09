@@ -4,7 +4,10 @@ import { Reveal } from "./ui/reveal";
 
 export function AboutSection() {
   return (
-    <section className="bg-white px-6 md:px-12 lg:px-[133px] py-16 md:py-[100px]">
+    <section className="bg-white px-6 md:px-12 lg:px-[133px] py-16 md:py-[100px]" id="about" aria-labelledby="about-heading">
+      <h2 id="about-heading" className="sr-only">
+        About Vele Ndamulelo
+      </h2>
       <div className="flex flex-col lg:flex-row items-start justify-between gap-12">
         <TextGenerateEffect
           words="Driven by curiosity and a love for design, I create simple, functional, and visually striking digital experiences. As a student, I’m always learning and exploring new ideas."

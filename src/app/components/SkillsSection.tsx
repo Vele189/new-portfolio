@@ -16,12 +16,13 @@ import {
 
 export function SkillsSection() {
   return (
-    <section className="bg-black" id="skills">
+    <section className="bg-black" id="skills" aria-labelledby="skills-heading">
       {/* Heading */}
       <div className="relative px-6 md:px-12 lg:px-[115px] py-20 md:py-[140px] flex justify-center">
         <Sparkles count={48} className="opacity-70" />
         <Reveal className="relative z-10">
           <h2
+            id="skills-heading"
             className="font-['DM_Sans:Regular',sans-serif] font-normal text-center text-white text-[clamp(2.5rem,9vw,8.75rem)] leading-[1.05] max-w-[1212px]"
             style={{ fontVariationSettings: '"opsz" 14' }}
           >

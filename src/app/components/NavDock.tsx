@@ -34,8 +34,8 @@ const items = [
   },
   {
     title: "Resume",
-    href: "/Vele_Ndamulelo.pdf",
-    download: "Vele_Ndamulelo.pdf",
+    href: "/vele-ndamulelo-resume-3.pdf",
+    download: "Vele-Ndamulelo-Resume.pdf",
     icon: <IconFileText className={iconClass} />,
   },
   {

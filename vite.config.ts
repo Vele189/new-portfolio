@@ -20,7 +20,7 @@ export default defineConfig({
   plugins: [
     figmaAssetResolver(),
     // The React and Tailwind plugins are both required for Make, even if
-    // Tailwind is not being actively used – do not remove them
+    // Tailwind is not being actively used, do not remove them
     react(),
     tailwindcss(),
   ],
@@ -28,6 +28,19 @@ export default defineConfig({
     alias: {
       // Alias @ to the src directory
       '@': path.resolve(__dirname, './src'),
+    },
+  },
+
+  build: {
+    // Vendor code changes far less often than the app does; splitting it keeps
+    // return visits on a warm cache instead of re-downloading everything.
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          react: ['react', 'react-dom'],
+          motion: ['motion'],
+        },
+      },
     },
   },
 

@@ -36,12 +36,12 @@ export function SkillCard({
           )}
 
           <div className="flex flex-col gap-[10px]">
-            <p
+            <h3
               className="font-['DM_Sans:Medium',sans-serif] font-medium text-[clamp(1.25rem,2vw,1.75rem)] text-white"
               style={{ fontVariationSettings: '"opsz" 14' }}
             >
               {title}
-            </p>
+            </h3>
             <p
               className="font-['DM_Sans:Light',sans-serif] font-light text-[#aaa] text-[clamp(1rem,1.4vw,1.25rem)]"
               style={{ fontVariationSettings: '"opsz" 14' }}
